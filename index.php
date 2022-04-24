@@ -1,5 +1,5 @@
 <?php
-include "route.php";
+include "includes/classautoloader.inc.php";
 
 /**
  * -----------------------------------------------
@@ -14,7 +14,7 @@ Route::add('/', function () {
     include('productlist.php');
 });
 
-// route for www.example.com/join
+// route for /add-product
 Route::add('/add-product', function () {
     include('addproduct.php');
 });
