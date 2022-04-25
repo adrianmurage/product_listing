@@ -1,13 +1,23 @@
 <?php
 
+include_once './classes/dbh.class.php';
+
 class Test extends Dbh
 {
-    public function getUser()
+    public function getAllUsers()
     {
-        $query = "SELECT * FROM test_table";
-        $result = $this->connect()->query($query);
-        while ($row = $result->fetch()) {
-            echo $row['FirstName'] . '<br>';
+        $query = "SELECT FirstName, LastName FROM test_table";
+        $statement = $this->connect()->query($query);
+        while ($row = $statement->fetch()) {
+            echo $row['FirstName'] . ' | ' . $row['LastName'] .  '<br>';
         }
     }
+
+    public function addNewUser($firstName, $lastName){
+        $query = "INSERT INTO test_table(FirstName, LastName) VALUES(?, ?)";
+        $statement = $this->connect()->prepare($query);
+        $statement->execute([$firstName, $lastName]);
+
+    }
 }
+

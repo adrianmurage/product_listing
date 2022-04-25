@@ -23,11 +23,11 @@ class Dbh
         $pdo = new PDO($dsn, $this->cleardb_username, $this->cleardb_password);
         $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
 
-        if (!$pdo) {
-            echo "connection failed!";
-        } else {
-            echo "connection successful!" . '<br>';
-        }
+        // if (!$pdo) {
+        //     echo "connection failed!";
+        // } else {
+        //     echo "connection successful!" . '<br>';
+        // }
         return $pdo;
     }
 }

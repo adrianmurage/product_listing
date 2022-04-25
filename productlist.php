@@ -1,4 +1,4 @@
 <?php
 
 $connection = new Test();
-$connection->getUser();
+$connection->getAllUsers();
