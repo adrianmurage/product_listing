@@ -13,4 +13,10 @@ echo $last_name;
 $insertUser = new Test();
 $insertUser->addNewUser($first_name, $last_name);
 
-header('Location:/');
+$environment = getenv("ENVIRONMENT");
+
+if ($environment == "development"){
+    header('Location:/productlist/');
+} else {
+    header('Location:/');
+}
