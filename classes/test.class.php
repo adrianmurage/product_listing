@@ -13,7 +13,7 @@ class Test extends Dbh
         }
     }
 
-    public function addNewUser($firstName, $lastName){
+    public function setNewUser($firstName, $lastName){
         $query = "INSERT INTO test_table(FirstName, LastName) VALUES(?, ?)";
         $statement = $this->connect()->prepare($query);
         $statement->execute([$firstName, $lastName]);

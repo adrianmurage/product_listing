@@ -11,7 +11,7 @@ echo $first_name;
 echo $last_name; 
 
 $insertUser = new Test();
-$insertUser->addNewUser($first_name, $last_name);
+$insertUser->setNewUser($first_name, $last_name);
 
 $environment = getenv("ENVIRONMENT");
 
