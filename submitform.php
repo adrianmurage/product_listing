@@ -17,6 +17,6 @@ $environment = getenv("ENVIRONMENT");
 
 if ($environment == "development"){
     header('Location:/productlist/');
-} else {
+} elseif ($environment == "production") {
     header('Location:/');
 }
