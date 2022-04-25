@@ -1,5 +1,7 @@
 <?php
-include "includes/classautoloader.inc.php";
+include_once "./classes/route.class.php";
+include_once "./classes/dbh.class.php";
+include_once "./classes/test.class.php";
 
 /**
  * -----------------------------------------------
