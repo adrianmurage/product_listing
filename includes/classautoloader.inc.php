@@ -1,6 +1,8 @@
 <?php
 
 spl_autoload_register('autoLoader');
+define('BASEURL', $_SERVER['DOCUMENT_ROOT']); 
+
 
 
 function autoLoader($className)
@@ -8,10 +10,10 @@ function autoLoader($className)
     $url = $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
 
     if (strpos($url, 'includes') !== false) {
-        $path = '../classes/';
+        $path = BASEURL . '../classes/';
     } else {
 
-        $path = "classes/";
+        $path = BASEURL . "classes/";
     }
     $extension = ".class.php";
 
