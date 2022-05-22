@@ -5,18 +5,27 @@ $(document).ready(function () {
       if (data.length > 0) {
         var displayUsers = processUsers(JSON.parse(data));
       }
-      $("#user-data").html(displayUsers);
+      $("#user-data").append(displayUsers);
     },
   });
 });
 
 function processUsers(data) {
-  let html = "";
+  const parent = document.getElementById("user-data");
 
   if (Array.isArray(data)) {
     data.map((user) => {
-      html += `<div> First Name: ${user["FirstName"]} </div></br>`;
+      const node = document.createElement("div");
+
+      node.className = "card";
+      node.innerHTML = `${user["FirstName"]} ${user["LastName"]}`;
+
+      node.addEventListener("click", () => {
+        console.log(`${user["FirstName"]} clicked`);
+      });
+
+      parent.appendChild(node);
     });
   }
-  return html;
+  return parent;
 }
