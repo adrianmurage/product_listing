@@ -7,10 +7,13 @@ class Test extends Dbh
     public function getAllUsers()
     {
         $query = "SELECT FirstName, LastName FROM test_table";
-        $statement = $this->connect()->query($query);
-        while ($row = $statement->fetch()) {
-            echo $row['FirstName'] . ' | ' . $row['LastName'] .  '<br>';
+        $result = $this->connect()->query($query);
+
+        $rows = array();
+        while ($row = $result->fetch()) {
+            $rows[] = $row;
         }
+        return $rows;
     }
 
     public function setNewUser($firstName, $lastName){
