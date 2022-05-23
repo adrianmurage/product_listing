@@ -13,11 +13,10 @@
 <body>
     <h1>Product List</h1>
     <button>Add</button>
-    <button>Mass Delete</button>
+    <button id="mass-delete">Mass Delete</button>
 <hr>
-
-    <div id="user-data">
-
+    <div id="productlist">
+        
     </div>
 </body>
 
