@@ -14,33 +14,24 @@
     <center>
         <h1>Storing Form data in Database</h1>
         <form action="./submitform.php" method="post">
-            <p>
-                <label for="firstName">First Name:</label>
-                <input type="text" name="first_name" id="firstName">
-            </p>
-            <p>
-                <label for="lastName">Type Switcher</label>
-                <input type="text" name="last_name" id="lastName">
-            </p>
+            <label for="sku">SKU:</label>
+            <input type="text" id="sku">
+            <br>
+            <label for="name">Name</label>
+            <input type="text" id="name">
+            <br>
+            <label for="price">Price ($)</label>
+            <input type="text" id="price">
+            <br>
             <label for="productType">Type Switcher:</label>
             <select name="productType" id="productType">
-                <option value="" id="none">--Please choose an option--</option>
+                <option value="None" id="none">--Please choose an option--</option>
                 <option value="DVD" id="DVD">DVD</option>
                 <option value="Furniture" id="Furniture">Furniture</option>
                 <option value="Book" id="Book">Book</option>
             </select>
-            <fieldset id="DVD-fieldset">
-                <label for="name">Name (4 to 8 characters):</label>
-                <input type="text" id="name" name="name" required minlength="4" maxlength="8" size="10">
-            </fieldset>
-            <fieldset id="Furniture-fieldset">
-                <label for="name">OtherName (4 to 8 characters):</label>
-                <input type="text" id="name" name="name" required minlength="4" maxlength="8" size="10">
-            </fieldset>
-            <fieldset id="Book-fieldset">
-                <label for="name">FinalName (4 to 8 characters):</label>
-                <input type="text" id="name" name="name" required minlength="4" maxlength="8" size="10">
-            </fieldset>
+
+            <fieldset id="typeswitcher"></fieldset>
             <input type="submit" value="Submit">
         </form>
     </center>
