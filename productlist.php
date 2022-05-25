@@ -14,9 +14,9 @@
     <h1>Product List</h1>
     <button>Add</button>
     <button id="mass-delete">Mass Delete</button>
-<hr>
+    <hr>
     <div id="productlist">
-        
+
     </div>
 </body>
 

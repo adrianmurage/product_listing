@@ -1,5 +1,4 @@
 $(document).ready(function () {
-
   // get all products from db
   $.ajax({
     url: "./getproducts.php",
@@ -31,10 +30,10 @@ $(document).ready(function () {
     $.ajax({
       url: "./deleteproducts.php",
       type: "POST",
-      data:{values: values},
+      data: { values: values },
       success: function (data) {
         console.log(data);
-        console.log(typeof(data))
+        console.log(typeof data);
       },
     });
   });
