@@ -1,4 +1,21 @@
 $(document).ready(function () {
+  const form = document.getElementById("addProduct");
+  form.addEventListener("submit", function (event) {
+    event.preventDefault();
+    console.log("Working");
+    const formData = new FormData(form);
+
+    const formDataObject = {};
+    console.log(formData);
+    for (data of formData) {
+      formDataObject[data[0]] = data[1];
+      console.log(data);
+    }
+    console.log(formDataObject);
+  });
+
+  // TODO: add a way to create the final product object that gets sent to the db
+
   //get the value of the select
   $("#productType").on("change", function () {
     TypeSwitcher(this.value);
@@ -25,6 +42,7 @@ function insertDvd() {
   dvdSizeLabel.innerHTML = "Size (MB)";
   dvdSize.type = "input";
   dvdSize.id = "size";
+  dvdSize.name = "size";
   parent.appendChild(dvdSizeLabel);
   parent.appendChild(dvdSize);
 }
@@ -39,6 +57,7 @@ function insertFurniture() {
   furnitureHeightLabel.innerHTML = "Height (CM)";
   furnitureHeight.type = "input";
   furnitureHeight.id = "height";
+  furnitureHeight.name = "height";
   parent.appendChild(furnitureHeightLabel);
   parent.appendChild(furnitureHeight);
 
@@ -49,6 +68,7 @@ function insertFurniture() {
   furnitureWidthLabel.innerHTML = "Width (CM)";
   furnitureWidth.type = "input";
   furnitureWidth.id = "width";
+  furnitureWidth.name = "width";
   parent.appendChild(furnitureWidthLabel);
   parent.appendChild(furnitureWidth);
 
@@ -59,6 +79,7 @@ function insertFurniture() {
   furnitureLengthLabel.innerHTML = "Length (CM)";
   furnitureLength.type = "input";
   furnitureLength.id = "length";
+  furnitureLength.name = "length";
   parent.appendChild(furnitureLengthLabel);
   parent.appendChild(furnitureLength);
 }
@@ -71,6 +92,7 @@ function insertBook() {
   bookWeightLabel.innerHTML = "Weight (KG)";
   bookWeight.type = "input";
   bookWeight.id = "weight";
+  bookWeight.name = "weight";
   parent.appendChild(bookWeightLabel);
   parent.appendChild(bookWeight);
 }

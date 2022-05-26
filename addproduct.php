@@ -13,15 +13,15 @@
 <body>
     <center>
         <h1>Storing Form data in Database</h1>
-        <form action="./submitform.php" method="post">
+        <form id="addProduct">
             <label for="sku">SKU:</label>
-            <input type="text" id="sku">
+            <input type="text" id="sku" name="sku">
             <br>
             <label for="name">Name</label>
-            <input type="text" id="name">
+            <input type="text" id="name" name="name">
             <br>
             <label for="price">Price ($)</label>
-            <input type="text" id="price">
+            <input type="text" id="price" name="price">
             <br>
             <label for="productType">Type Switcher:</label>
             <select name="productType" id="productType">
