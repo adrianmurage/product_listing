@@ -2,14 +2,11 @@ $(document).ready(function () {
   const form = document.getElementById("addProduct");
   form.addEventListener("submit", function (event) {
     event.preventDefault();
-    console.log("Working");
     const formData = new FormData(form);
 
     const formDataObject = {};
-    console.log(formData);
     for (data of formData) {
       formDataObject[data[0]] = data[1];
-      console.log(data);
     }
     console.log(formDataObject);
   });

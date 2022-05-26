@@ -33,7 +33,6 @@ $(document).ready(function () {
       data: { values: values },
       success: function (data) {
         console.log(data);
-        console.log(typeof data);
       },
     });
   });
