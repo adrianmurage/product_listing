@@ -13,9 +13,9 @@
 <body>
     <h1>Product List</h1>
     <form method="GET" action="./addproduct.php">
-        <input type="submit" value="Add">
+        <input type="submit" value="ADD">
     </form>
-    <button id="mass-delete">Mass Delete</button>
+    <button id="mass-delete">MASS DELETE</button>
     <hr>
     <div id="productlist">
 
