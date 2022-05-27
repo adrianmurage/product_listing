@@ -8,10 +8,71 @@ $(document).ready(function () {
     for (data of formData) {
       formDataObject[data[0]] = data[1];
     }
-    console.log(formDataObject);
+
+    // console.log(handlePostObject[formDataObject["productType"]])
+    postObject =
+      handlePostObject[formDataObject["productType"]](formDataObject);
+
+    console.log(postObject);
+
+    $.ajax({
+      url: "./submitform.php",
+      type: "POST",
+      data: { values: postObject },
+      success: function (data) {
+        console.log(data);
+      },
+    });
   });
 
   // TODO: add a way to create the final product object that gets sent to the db
+  const handlePostObject = {
+    DVD: dvdMeasurement,
+    Furniture: furnitureMeasurements,
+    Book: bookMeasurement,
+  };
+
+  function furnitureMeasurements(formDataObject) {
+    measurement =
+      formDataObject["height"] +
+      " x " +
+      formDataObject["width"] +
+      " x " +
+      formDataObject["length"];
+
+    postObject = {
+      ProductSku: formDataObject["sku"],
+      ProductName: formDataObject["name"],
+      ProductPrice: formDataObject["price"],
+      ProductType: formDataObject["productType"],
+      ProductMeasurementValues: measurement,
+    };
+
+    return postObject;
+  }
+
+  function dvdMeasurement(formDataObject) {
+    postObject = {
+      ProductSku: formDataObject["sku"],
+      ProductName: formDataObject["name"],
+      ProductPrice: formDataObject["price"],
+      ProductType: formDataObject["productType"],
+      ProductMeasurementValues: formDataObject["size"],
+    };
+    return postObject;
+  }
+
+  function bookMeasurement(formDataObject) {
+    postObject = {
+      ProductSku: formDataObject["sku"],
+      ProductName: formDataObject["name"],
+      ProductPrice: formDataObject["price"],
+      ProductType: formDataObject["productType"],
+      ProductMeasurementValues: formDataObject["weight"],
+    };
+
+    return postObject;
+  }
 
   //get the value of the select
   $("#productType").on("change", function () {

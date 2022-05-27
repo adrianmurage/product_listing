@@ -1,26 +1,20 @@
 <?php
 
-include_once './classes/test.class.php';
-include_once './classes/dbh.class.php';
+include_once './classes/product.class.php';
 
-$sku = array_key_exists('sku', $_POST) ? $_POST['sku'] : "";
+// $sku = array_key_exists('sku', $_POST) ? $_POST['sku'] : "";
 
-echo $sku; 
+// {
+//     "ProductSku": "DI2983HS9",
+//     "ProductName": "Chair",
+//     "ProductPrice": "10",
+//     "ProductType": "Furniture",
+//     "ProductMeasurementValue": "10 x 30 x 40"
+// }
+$products = new Product();
+$results = $products->setProduct($_REQUEST["values"]["ProductSku"], $_REQUEST["values"]["ProductName"], $_REQUEST["values"]["ProductPrice"], $_REQUEST["values"]["ProductType"], $_REQUEST["values"]["ProductMeasurementValues"]);
 
-// <?php
-
-// include_once './classes/test.class.php';
-// include_once './classes/dbh.class.php';
-
-// $first_name = array_key_exists('first_name', $_POST) ? $_POST['first_name'] : "";
-// $last_name = array_key_exists('last_name', $_POST) ? $_POST['last_name'] : "";
-
-
-// echo $first_name; 
-// echo $last_name; 
-
-// $insertUser = new Test();
-// $insertUser->setNewUser($first_name, $last_name);
+echo json_encode($results); 
 
 // $environment = getenv("ENVIRONMENT");
 
