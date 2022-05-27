@@ -53,7 +53,7 @@ function processProducts(data) {
       const checkbox = document.createElement("input");
       checkbox.type = "checkbox";
       checkbox.id = product["ID"];
-      checkbox.class = "delete-checkbox";
+      checkbox.className = "delete-checkbox";
       product_div.appendChild(checkbox);
       parent.appendChild(product_div);
     });
