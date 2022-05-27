@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  const form = document.getElementById("addProduct");
+  const form = document.getElementById("product_form");
   form.addEventListener("submit", function (event) {
     event.preventDefault();
     const formData = new FormData(form);

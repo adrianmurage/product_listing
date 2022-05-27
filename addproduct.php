@@ -13,7 +13,7 @@
 <body>
     <center>
         <h1>Storing Form data in Database</h1>
-        <form id="addProduct">
+        <form id="product_form">
             <label for="sku">SKU:</label>
             <input type="text" id="sku" name="sku">
             <br>
