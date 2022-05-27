@@ -32,7 +32,7 @@
             </select>
 
             <fieldset id="typeswitcher"></fieldset>
-            <input type="submit" value="Submit">
+            <input type="submit" value="Save">
         </form>
     </center>
 </body>
