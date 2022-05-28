@@ -6,5 +6,3 @@ $products = new Product();
 $results = $products->getAllProducts();
 
 echo json_encode($results);
-
-?>

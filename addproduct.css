@@ -62,9 +62,8 @@ input:focus {
 }
 
 legend {
-    background-color: rgb(49, 49, 49);
-    color: rgb(255, 255, 255);
-    padding: 10px 10px;
-    margin-bottom: 20px;
+  background-color: rgb(49, 49, 49);
+  color: rgb(255, 255, 255);
+  padding: 10px 10px;
+  margin-bottom: 20px;
 }
-
