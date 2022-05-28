@@ -30,6 +30,10 @@
   margin: 0;
 }
 
+.product_card > p {
+  text-align: center;
+}
+
 #productlist {
   display: flex;
   flex-wrap: wrap;
