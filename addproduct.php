@@ -22,17 +22,17 @@
     <hr>
     <form id="product_form">
         <label for="sku">SKU:</label>
-        <input type="text" id="sku" name="sku">
+        <input required type="text" id="sku" name="sku">
         <br>
         <label for="name">Name:</label>
-        <input type="text" id="name" name="name">
+        <input required type="text" id="name" name="name">
         <br>
         <label for="price">Price ($):</label>
-        <input type="text" id="price" name="price">
+        <input required type="number" id="price" name="price">
         <br>
         <label for="productType">Type Switcher:</label>
-        <select name="productType" id="productType">
-            <option value="None" id="none">--Please choose an option--</option>
+        <select required name="productType" id="productType">
+            <option value="" id="none">--Please choose an option--</option>
             <option value="DVD" id="DVD">DVD</option>
             <option value="Furniture" id="Furniture">Furniture</option>
             <option value="Book" id="Book">Book</option>

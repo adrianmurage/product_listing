@@ -94,7 +94,7 @@ const handleProductTypes = {
   DVD: insertDvd,
   Furniture: insertFurniture,
   Book: insertBook,
-  None: clearOptions,
+  "": clearOptions,
 };
 function insertDvd() {
   const parent = document.getElementById("typeswitcher");
@@ -107,9 +107,10 @@ function insertDvd() {
   const dvdSizeLabel = document.createElement("label");
   dvdSizeLabel.setAttribute("for", "size");
   dvdSizeLabel.innerHTML = "Size (MB)";
-  dvdSize.type = "input";
+  dvdSize.type = "number";
   dvdSize.id = "size";
   dvdSize.name = "size";
+  dvdSize.setAttribute("required", true);
   parent.appendChild(legend);
   parent.appendChild(dvdSizeLabel);
   parent.appendChild(dvdSize);
@@ -127,9 +128,10 @@ function insertFurniture() {
   const furnitureHeightLabel = document.createElement("label");
   furnitureHeightLabel.setAttribute("for", "height");
   furnitureHeightLabel.innerHTML = "Height (CM)";
-  furnitureHeight.type = "input";
+  furnitureHeight.type = "number";
   furnitureHeight.id = "height";
   furnitureHeight.name = "height";
+  furnitureHeight.setAttribute("required", true);
   parent.appendChild(legend);
   parent.appendChild(furnitureHeightLabel);
   parent.appendChild(furnitureHeight);
@@ -139,9 +141,10 @@ function insertFurniture() {
   const furnitureWidthLabel = document.createElement("label");
   furnitureWidthLabel.setAttribute("for", "width");
   furnitureWidthLabel.innerHTML = "Width (CM)";
-  furnitureWidth.type = "input";
+  furnitureWidth.type = "number";
   furnitureWidth.id = "width";
   furnitureWidth.name = "width";
+  furnitureWidth.setAttribute("required", true);
   parent.appendChild(furnitureWidthLabel);
   parent.appendChild(furnitureWidth);
 
@@ -150,9 +153,10 @@ function insertFurniture() {
   const furnitureLengthLabel = document.createElement("label");
   furnitureLengthLabel.setAttribute("for", "length");
   furnitureLengthLabel.innerHTML = "Length (CM)";
-  furnitureLength.type = "input";
+  furnitureLength.type = "number";
   furnitureLength.id = "length";
   furnitureLength.name = "length";
+  furnitureLength.setAttribute("required", true);
   parent.appendChild(furnitureLengthLabel);
   parent.appendChild(furnitureLength);
 }
@@ -168,9 +172,10 @@ function insertBook() {
   const bookWeightLabel = document.createElement("label");
   bookWeightLabel.setAttribute("for", "weight");
   bookWeightLabel.innerHTML = "Weight (KG)";
-  bookWeight.type = "input";
+  bookWeight.type = "number";
   bookWeight.id = "weight";
   bookWeight.name = "weight";
+  bookWeight.setAttribute("required", true);
   parent.appendChild(legend);
   parent.appendChild(bookWeightLabel);
   parent.appendChild(bookWeight);
