@@ -176,6 +176,7 @@ function insertBook() {
   bookWeight.id = "weight";
   bookWeight.name = "weight";
   bookWeight.setAttribute("required", true);
+  bookWeight.setAttribute("step", "0.001");
   parent.appendChild(legend);
   parent.appendChild(bookWeightLabel);
   parent.appendChild(bookWeight);
