@@ -1,7 +1,7 @@
 $(document).ready(function () {
   // get all products from db when the page fully loads
   $.ajax({
-    url: "./requests/getproducts.php",
+    url: "./getproducts.request.php",
     success: function (data) {
       if (data.length > 0) {
         var displayProducts = processProducts(JSON.parse(data));
@@ -28,7 +28,7 @@ massDeleteBtn.addEventListener("click", (event) => {
   });
 
   $.ajax({
-    url: "./requests/deleteproducts.php",
+    url: "./deleteproducts.request.php",
     type: "POST",
     data: { values: values },
     success: function (data) {

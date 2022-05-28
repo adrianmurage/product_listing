@@ -130,7 +130,7 @@ form.addEventListener("submit", function (event) {
   postObject = handlePostObject[formDataObject["productType"]](formDataObject);
 
   $.ajax({
-    url: "./requests/submitform.php",
+    url: "./addproduct.request.php",
     type: "POST",
     data: { values: postObject },
     success: function (data) {
