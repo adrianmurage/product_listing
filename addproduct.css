@@ -19,13 +19,13 @@
 
 .save_btn {
   margin-left: auto;
-  width: 70px;
+  width: 80px;
 }
 
 .cancel_btn {
   margin-left: 1em;
-  margin-right: 1em;
-  width: 70px;
+  margin-right: 2em;
+  width: 80px;
 }
 
 .page_heading {
