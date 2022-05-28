@@ -27,7 +27,7 @@
         <label for="name">Name:</label>
         <input required type="text" id="name" name="name">
         <br>
-        <label for="price">Price ($):</label>
+        <label for="price" min="1">Price ($):</label>
         <input required type="number" id="price" name="price">
         <br>
         <label for="productType">Type Switcher:</label>
