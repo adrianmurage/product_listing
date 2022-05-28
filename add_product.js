@@ -20,7 +20,12 @@ $(document).ready(function () {
       type: "POST",
       data: { values: postObject },
       success: function (data) {
-        console.log(data);
+        if (data) {
+          console.log("navigate");
+          location.href = "/";
+        } else {
+          console.log(data);
+        }
       },
     });
   });
@@ -94,6 +99,10 @@ const handleProductTypes = {
 function insertDvd() {
   const parent = document.getElementById("typeswitcher");
 
+  //fieldset legend
+  const legend = document.createElement("legend");
+  legend.innerHTML = "Please provide the size of the DVD in MBs";
+
   const dvdSize = document.createElement("input");
   const dvdSizeLabel = document.createElement("label");
   dvdSizeLabel.setAttribute("for", "size");
@@ -101,12 +110,17 @@ function insertDvd() {
   dvdSize.type = "input";
   dvdSize.id = "size";
   dvdSize.name = "size";
+  parent.appendChild(legend);
   parent.appendChild(dvdSizeLabel);
   parent.appendChild(dvdSize);
 }
 
 function insertFurniture() {
   const parent = document.getElementById("typeswitcher");
+
+  //fieldset legend
+  const legend = document.createElement("legend");
+  legend.innerHTML = "Please provide dimensions in H x W x L format";
 
   //furniture height
   const furnitureHeight = document.createElement("input");
@@ -116,6 +130,7 @@ function insertFurniture() {
   furnitureHeight.type = "input";
   furnitureHeight.id = "height";
   furnitureHeight.name = "height";
+  parent.appendChild(legend);
   parent.appendChild(furnitureHeightLabel);
   parent.appendChild(furnitureHeight);
 
@@ -144,6 +159,11 @@ function insertFurniture() {
 
 function insertBook() {
   const parent = document.getElementById("typeswitcher");
+
+  //fieldset legend
+  const legend = document.createElement("legend");
+  legend.innerHTML = "Please provide the weight of the book in KGs";
+
   const bookWeight = document.createElement("input");
   const bookWeightLabel = document.createElement("label");
   bookWeightLabel.setAttribute("for", "weight");
@@ -151,6 +171,7 @@ function insertBook() {
   bookWeight.type = "input";
   bookWeight.id = "weight";
   bookWeight.name = "weight";
+  parent.appendChild(legend);
   parent.appendChild(bookWeightLabel);
   parent.appendChild(bookWeight);
 }

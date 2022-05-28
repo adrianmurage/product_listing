@@ -1,0 +1,70 @@
+* {
+  box-sizing: border-box;
+}
+
+#product_form {
+  /* margin: 0 auto; */
+  width: 500px;
+  margin-left: 1.5em;
+
+  padding: 1em;
+  border: 1px solid #ccc;
+  border-radius: 0.5em;
+}
+
+.header {
+  display: flex;
+  align-items: baseline;
+}
+
+.save_btn {
+  margin-left: auto;
+  width: 70px;
+}
+
+.cancel_btn {
+  margin-left: 1em;
+  margin-right: 1em;
+  width: 70px;
+}
+
+.page_heading {
+  margin-left: 1.5em;
+}
+
+label {
+  display: inline-block;
+  width: 120px;
+  text-align: left;
+  margin-bottom: 30px;
+}
+
+input {
+  /* To make sure that all text fields have the same font settings
+     By default, textareas have a monospace font */
+  font: 1em sans-serif;
+
+  /* Uniform text field size */
+  width: 300px;
+
+  /* Match form field borders */
+  border: 1px solid #999;
+}
+
+fieldset {
+  border: none;
+  padding: 0;
+}
+
+input:focus {
+  /* Additional highlight for focused elements */
+  border-color: #000;
+}
+
+legend {
+    background-color: rgb(49, 49, 49);
+    color: rgb(255, 255, 255);
+    padding: 10px 10px;
+    margin-bottom: 20px;
+}
+
