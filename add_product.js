@@ -111,6 +111,7 @@ function insertDvd() {
   dvdSize.id = "size";
   dvdSize.name = "size";
   dvdSize.setAttribute("required", true);
+  dvdSize.setAttribute("min", "1");
   parent.appendChild(legend);
   parent.appendChild(dvdSizeLabel);
   parent.appendChild(dvdSize);
@@ -132,6 +133,7 @@ function insertFurniture() {
   furnitureHeight.id = "height";
   furnitureHeight.name = "height";
   furnitureHeight.setAttribute("required", true);
+  furnitureHeight.setAttribute("min", "1");
   parent.appendChild(legend);
   parent.appendChild(furnitureHeightLabel);
   parent.appendChild(furnitureHeight);
@@ -145,6 +147,7 @@ function insertFurniture() {
   furnitureWidth.id = "width";
   furnitureWidth.name = "width";
   furnitureWidth.setAttribute("required", true);
+  furnitureWidth.setAttribute("min", "1");
   parent.appendChild(furnitureWidthLabel);
   parent.appendChild(furnitureWidth);
 
@@ -157,6 +160,7 @@ function insertFurniture() {
   furnitureLength.id = "length";
   furnitureLength.name = "length";
   furnitureLength.setAttribute("required", true);
+  furnitureLength.setAttribute("min", "1");
   parent.appendChild(furnitureLengthLabel);
   parent.appendChild(furnitureLength);
 }
@@ -177,6 +181,7 @@ function insertBook() {
   bookWeight.name = "weight";
   bookWeight.setAttribute("required", true);
   bookWeight.setAttribute("step", "0.001");
+  bookWeight.setAttribute("min", "1");
   parent.appendChild(legend);
   parent.appendChild(bookWeightLabel);
   parent.appendChild(bookWeight);
