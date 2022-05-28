@@ -18,6 +18,7 @@
 }
 
 .save_btn {
+  letter-spacing: 1px;
   margin-left: auto;
   width: 80px;
   background-color: rgba(221, 214, 254, 0.7);
@@ -29,8 +30,9 @@
 }
 
 .cancel_btn {
+  letter-spacing: 1px;
   margin-left: 1em;
-  margin-right: 2em;
+  margin-right: 1em;
   width: 80px;
   background-color: rgba(251, 207, 232, 0.7);
   padding: 0.5em;
@@ -55,13 +57,13 @@ label {
 input {
   /* To make sure that all text fields have the same font settings
      By default, textareas have a monospace font */
-  font: 1em sans-serif;
 
   /* Uniform text field size */
   width: 300px;
 
   /* Match form field borders */
   border: 1px solid #999;
+  border-radius: 5px;
 }
 
 fieldset {

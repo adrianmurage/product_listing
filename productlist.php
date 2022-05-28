@@ -13,8 +13,8 @@
 <body>
     <section class="header">
         <h1 class="page_heading">Product List</h1>
-        <button class="massdelete_btn" id="mass-delete">MASS DELETE</button>
         <input class="addproduct_btn" form="add_product" type="submit" value="ADD">
+        <button class="massdelete_btn" id="mass-delete">MASS DELETE</button>
     </section>
 
     <hr>

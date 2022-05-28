@@ -8,11 +8,11 @@
   align-items: baseline;
 }
 
-.massdelete_btn {
+.addproduct_btn {
   letter-spacing: 1px;
   margin-left: auto;
-  width: 140px;
-  background-color: rgba(251, 207, 232, 0.7);
+  width: 70px;
+  background-color: rgba(221, 214, 254, 0.7);
   padding: 0.5em;
   border-radius: 5px;
   font-weight: 700;
@@ -20,12 +20,12 @@
   cursor: pointer;
 }
 
-.addproduct_btn {
+.massdelete_btn {
   letter-spacing: 1px;
   margin-left: 1em;
   margin-right: 1em;
-  width: 70px;
-  background-color: rgba(221, 214, 254, 0.7);
+  width: 140px;
+  background-color: rgba(251, 207, 232, 0.7);
   padding: 0.5em;
   border-radius: 5px;
   font-weight: 700;
