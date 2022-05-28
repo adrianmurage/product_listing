@@ -45,7 +45,7 @@ function processProducts(data) {
   if (Array.isArray(data)) {
     data.map((product) => {
       // create product div
-      const product_div = document.createElement("p");
+      const product_div = document.createElement("div");
       product_div.className = "product_card";
       const p_sku = document.createElement("p");
       p_sku.innerHTML = product["ProductSKU"];
