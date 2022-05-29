@@ -20,12 +20,17 @@ massDeleteBtn.addEventListener("click", (event) => {
   const checkboxes = document.querySelectorAll(
     'input[type="checkbox"]:checked'
   );
+
   const values = [];
   checkboxes.forEach((checkbox) => {
     values.push(checkbox.id);
-
-    checkbox.parentElement.remove();
   });
+
+  function removeFromDOM() {
+    checkboxes.forEach((checkbox) => {
+      checkbox.parentElement.remove();
+    });
+  }
 
   $.ajax({
     url: "./deleteproducts.request.php",
@@ -33,6 +38,7 @@ massDeleteBtn.addEventListener("click", (event) => {
     data: { values: values },
     success: function (data) {
       console.log(data);
+      removeFromDOM();
     },
   });
 });
@@ -54,7 +60,7 @@ function processProducts(data) {
       const p_price = document.createElement("p");
       p_price.innerHTML = `${product["ProductPrice"]} $`;
       const p_dimensions = document.createElement("p");
-      console.log();
+
       if (product["ProductType"] == "DVD") {
         p_dimensions.innerHTML = `Size: ${product["ProductMeasurementValues"]} MB`;
       } else if (product["ProductType"] == "Book") {
