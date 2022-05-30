@@ -3,10 +3,6 @@
   font-family: "Secular One", sans-serif;
 }
 
-input[type="submit"] {
-  -webkit-appearance: button;
-}
-
 .header {
   display: flex;
   align-items: baseline;

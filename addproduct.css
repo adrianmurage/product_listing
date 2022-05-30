@@ -3,10 +3,6 @@
   font-family: "Secular One", sans-serif;
 }
 
-input[type=submit]{
-  -webkit-appearance: button;
-}
-
 #product_form {
   margin: 40px auto;
   width: 500px;
