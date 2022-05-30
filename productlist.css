@@ -18,6 +18,7 @@
   font-weight: 700;
   border: none;
   cursor: pointer;
+  color: black;
 }
 
 .massdelete_btn {
@@ -31,6 +32,7 @@
   font-weight: 700;
   border: none;
   cursor: pointer;
+  color: black
 }
 
 .page_heading {

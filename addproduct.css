@@ -27,6 +27,7 @@
   font-weight: 700;
   border: none;
   cursor: pointer;
+  color: black;
 }
 
 .cancel_btn {
@@ -40,6 +41,7 @@
   font-weight: 700;
   border: none;
   cursor: pointer;
+  color: black;
 }
 
 .page_heading {
