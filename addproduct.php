@@ -15,7 +15,6 @@
         <h1 class="page_heading">Product Add</h1>
         <input class="save_btn" type="submit" form="product_form" value="Save">
         <input class="cancel_btn" form="cancel" type="submit" value="Cancel">
-
     </section>
 
     <hr>
