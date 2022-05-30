@@ -1,7 +1,10 @@
 * {
   box-sizing: border-box;
   font-family: "Secular One", sans-serif;
-  color: black;
+}
+
+input[type=submit]{
+  -webkit-appearance: button;
 }
 
 #product_form {
